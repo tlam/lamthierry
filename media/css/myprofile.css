@@ -1,0 +1,16 @@
+h2 {
+    font-style: italic;
+}
+
+.left_col {
+    float: left;
+    width: 100px;
+}
+
+.right_col {
+    float: left;
+}
+
+.clear_both {
+    clear: both;
+}

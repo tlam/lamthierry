@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>Thierry Lam's Profile</title>
+    <link type="text/css" rel="stylesheet" href="/media/css/myprofile.css" media="screen" />
+    <script type="text/javascript" src="/media/js/jquery.min.js"></script> 
+  </head>
+  <body>
+
+  <h2>Profile</h2>
+
+
+
+  <h3>Skills</h3>
+  <div class="left_col">Languages:</div>
+  <ul class="right_col">
+    <li>Python - 4 years</li>
+    <li>Django - 1 month</li>
+    <li>PHP - 3.5 months</li>
+  </ul>
+  <div class="clear_both"></div>
+  <div class="left_col">SCM:</div>
+  <ul class="right_col">
+    <li>Perforce</li>
+    <li>CVS</li>
+    <li>Git</li>
+  </ul>
+  <div class="clear_both"></div>
+  Pulling info from the DB:
+  <ul>
+  {% for skill in skills %}
+    <li>{{ skill }} - {{ skill.level }} {{ skill.level_type }}{{ skill.level|pluralize }}</li>
+  {% endfor %}
+  </ul>
+
+  Currently running under Django {{ django_ver }} <br />
+
+  <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangomade124x25.gif" border="0" alt="Made with Django." title="Made with Django." /></a>
+  <img src="http://code.google.com/appengine/images/appengine-silver-120x30.gif" 
+       alt="Powered by Google App Engine" />
+
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-7147902-5");
+    pageTracker._trackPageview();
+  } catch(err) {}
+  </script>
+
+  </body>
+</html>
