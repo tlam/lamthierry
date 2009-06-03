@@ -2,7 +2,6 @@ import datetime
 from google.appengine.ext import bulkload, db
 from google.appengine.tools import bulkloader
 from myprofile.models import Skill
-import myprofile.models
 
 class SkillLoader(bulkloader.Loader):
 #class SkillLoader(bulkload.Loader):

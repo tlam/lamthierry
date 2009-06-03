@@ -11,9 +11,16 @@
 
   <h2>Profile</h2>
 
+  <h3>Active Skills</h3>
+  <ul id="active_skills">
+  {% for skill in active_skills %}
+    <li>
+      <img src="{{ skill.img_src }}" /> 
+      <div>{{ skill }} - {{ skill.current_xp|timesince }}</div>
+    </li>
+  {% endfor %}
+  </ul>
 
-
-  <h3>Skills</h3>
   <div class="left_col">Languages:</div>
   <ul class="right_col">
     <li>Python - 4 years</li>
@@ -31,7 +38,7 @@
   Pulling info from the DB:
   <ul>
   {% for skill in skills %}
-    <li>{{ skill }} - {{ skill.level }} {{ skill.level_type }}{{ skill.level|pluralize }}</li>
+    <li>{{ skill }} - {{ skill.current_xp|timesince }}</li>
   {% endfor %}
   </ul>
 

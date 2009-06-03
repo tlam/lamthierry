@@ -14,3 +14,8 @@ h2 {
 .clear_both {
     clear: both;
 }
+
+#active_skills li {
+    list-style: none;
+    float: left;
+}

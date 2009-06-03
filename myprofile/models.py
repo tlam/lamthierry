@@ -13,8 +13,11 @@ class Skill(db.Model):
     def __unicode__(self):
         return self.name
 
-'''
-s = Skill(name='Python', level=4, active=True, picture='python.gif', learnt_date=datetime.datetime.now())
-s = Skill(name='Perforce', level=3, level_type='month', active=True, picture='python.gif', learnt_date=datetime.datetime.now())
-s.put()
-'''
+    def img_src(self):
+        return '/media/img/' + self.picture
+
+    def current_xp(self):
+        if self.relearnt_date:
+            return self.level + relearnt_date
+        else:
+            return self.learnt_date
