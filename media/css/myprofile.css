@@ -1,3 +1,25 @@
+#greet {
+    font-size: xx-large;
+    font-style: italic;
+}
+
+#full_name {
+    font-size: large;
+    font-weight: bold;
+}
+
+#position {
+    font-size: x-large;
+}
+
+#right_col {
+    float: right;
+}
+
+.my_work {
+    float: left;
+}
+
 h2 {
     font-style: italic;
 }
@@ -15,7 +37,15 @@ h2 {
     clear: both;
 }
 
-#active_skills li {
+#active_skills li, #inactive_skills li {
     list-style: none;
-    float: left;
 }
+
+.skill_img {
+    text-align: right;
+}
+
+.skill_xp {
+    text-align: right;
+}
+

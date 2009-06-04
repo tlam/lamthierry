@@ -4,12 +4,18 @@ from myprofile.models import Skill
 import django, datetime
 
 def index(request):
-    skills = Skill.all()
+    active_date = datetime.date(2005, 2, 7)
     query = db.Query(Skill)
     query.filter('active =', True)
-    active_skills = query.fetch(8)
+    active_skills = query.fetch(10)
+
+    query = db.Query(Skill)
+    query.filter('active =', False)
+    inactive_skills = query.fetch(10)
+
     django_ver = django.get_version()
     return render_to_response('index.html', {
         'django_ver': django_ver, 
-        'skills': skills,
-        'active_skills': active_skills})
+        'active_skills': active_skills,
+        'inactive_skills': inactive_skills,
+        'active_date': active_date})
