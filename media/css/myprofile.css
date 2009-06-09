@@ -1,51 +1,66 @@
+body {
+  margin: 0 100px;
+}
+
 #greet {
-    font-size: xx-large;
-    font-style: italic;
+  font-size: xx-large;
+  font-style: italic;
 }
 
 #full_name {
-    font-size: large;
-    font-weight: bold;
+  font-size: large;
+  font-weight: bold;
 }
 
 #position {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 #right_col {
-    float: right;
+  float: right;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: 1px solid #000;
+  padding: 0 30px;
 }
 
 .my_work {
-    float: left;
+  padding-bottom: 25px;
 }
 
 h2 {
-    font-style: italic;
+  font-style: italic;
 }
 
-.left_col {
-    float: left;
-    width: 100px;
-}
-
-.right_col {
-    float: left;
+h3 {
+  color: #6495ED;
 }
 
 .clear_both {
-    clear: both;
+  clear: both;
 }
 
 #active_skills li, #inactive_skills li {
-    list-style: none;
+  list-style: none;
 }
 
 .skill_img {
-    text-align: right;
+  text-align: right;
 }
 
 .skill_xp {
-    text-align: right;
+  text-align: right;
 }
+
+div.my_work span {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+  cursor: pointer;
+  padding: .20em;
+  background: #DCDCDC;
+  border-top: 1px solid #386785;
+  border-bottom: 1px solid #386785;
+  border-style: outset;
+}
+
 
