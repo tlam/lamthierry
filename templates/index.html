@@ -1,47 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+  {% include "portfolio.html" %}
+
   <div id="greet">Bonjour,</div>
 
   My name is <span id="full_name">Thierry Lam</span>
   <div id="position">Web Developer</div>
-
-  <div id="right_col">
-    <h3>Professional Work</h3>
-    <div class="my_work">
-      <a href="/media/img/hype_large.png"><img src="/media/img/hype_banner.png" width="400" height="33" alt="FS Hype"></a>         
-      <p class="label"><strong><a href="http://www.fabuloussavings.com/hype/">FS Hype</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;[Feb 09 - Jun 09]</p> 
-      <span>More Info [+]</span>
-      <div>
-        <ul>
-          <li>Backend development with PHP/MySQL</li>
-        </ul>
-      </div>
-    </div>
-    <div class="my_work">
-      <a href="/media/img/cares_large.png"><img src="/media/img/cares_banner.png" width="400" height="51" alt="FS Cares"></a>         
-      <p class="label"><strong><a href="http://www.fabuloussavings.com/cares/">FS Cares</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;[Apr 09]</p> 
-      <span>More Info [+]</span>
-      <div>
-      Backend development with PHP/MySQL
-      </div>
-    </div>
-    <div class="clear_both"></div>
-
-    <h3>Personal Projects</h3>
-    <div class="my_work">
-      <p class="label"><strong><a href="/">You are looking at it</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;[May 09 - present]</p>       
-      <span>More Info [+]</span>
-      <div>
-      Django, Google App Engine
-      </div>
-    </div>
-    <div class="my_work">
-      <a href="/media/img/riptunes.png"><img src="/media/img/riptunes.png" width="400" height="243" alt="RipTunes"></a>         
-      <p class="label"><strong><a href="http://www.fabuloussavings.com/hype/">RipTunes</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;[2008]<br> 
-      Python, PyQt, Mutagen Library, show link to source code</p> 
-    </div>
-  </div>
 
   <h3>Active Skills</h3>
   <ul id="active_skills">
@@ -59,7 +24,31 @@
   {% endfor %}
   </ul>
 
+  <!--div id="python">
+    <img src="/media/img/python.gif" />
+  </div>
 
-  <div class="clear_both"></div>
+  <div id="jquery">
+    <img src="/media/img/jquery.gif" />
+  </div>
+
+  <div id="w3css">
+    <img src="/media/img/w3css.png" />
+  </div>
+
+  <div id="git">
+    <img src="/media/img/git.png" />
+  </div-->
+
+  <ul id="logos">
+    <li><img src="/media/img/python.gif" /></li>
+    <li><img src="/media/img/jquery.gif" /></li>
+    <li><img src="/media/img/php.png" /></li>
+    <li><img src="/media/img/mysql.gif" /></li>
+    <li><img src="/media/img/w3css.png" /></li>
+    <li><img src="/media/img/git.png" /></li>
+  </ul>
+
+  <div class="clear_both"></div><hr />
   Currently running under Django {{ django_ver }} <br />
 {% endblock %}
