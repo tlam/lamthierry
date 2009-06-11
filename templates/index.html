@@ -8,8 +8,21 @@
   My name is <span id="full_name">Thierry Lam</span>
   <div id="position">Web Developer</div>
 
+  <strong>{{ active_date|timesince }}</strong> of development experience
+  <table>
+    <tr>
+      <td class="duration">Feb 2009 - present</td><td class="pos">Web Developer</td>
+    </tr>
+    <tr>
+      <td class="duration">Nov 2006 - Jan 2009</td><td class="pos">Software Infrastructure Developer</td>
+    </tr>
+    <tr>
+      <td class="duration">Feb 2005 - Nov 2006</td><td class="pos">Software Developer</td>
+    </tr>
+  </table>
+
   <h3>Active Skills</h3>
-  <ul id="active_skills">
+  <ul>
   {% for skill in active_skills %}
     <li>
       {{ skill }} - <span class="skill_xp">{{ skill.current_xp|timesince }}</span>
@@ -18,27 +31,13 @@
   </ul>
 
   <h3>Other Skills</h3> 
-  <ul id="inactive_skills">
+  <ul>
   {% for skill in inactive_skills %}
     <li>{{ skill }} - {{ skill.level }} {{ skill.level_type }}{{ skill.level|pluralize }}</li>
   {% endfor %}
   </ul>
 
-  <!--div id="python">
-    <img src="/media/img/python.gif" />
-  </div>
-
-  <div id="jquery">
-    <img src="/media/img/jquery.gif" />
-  </div>
-
-  <div id="w3css">
-    <img src="/media/img/w3css.png" />
-  </div>
-
-  <div id="git">
-    <img src="/media/img/git.png" />
-  </div-->
+  <img src="/media/img/business_card.jpg" />
 
   <ul id="logos">
     <li><img src="/media/img/python.gif" /></li>
@@ -49,6 +48,6 @@
     <li><img src="/media/img/git.png" /></li>
   </ul>
 
+  
   <div class="clear_both"></div><hr />
-  Currently running under Django {{ django_ver }} <br />
 {% endblock %}

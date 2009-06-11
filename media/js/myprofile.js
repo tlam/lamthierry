@@ -74,7 +74,7 @@ $(document).ready(function()
     });
 
     // Press Escape event! 
-    $(document).keypress(function(e) {
+    $(document).keyup(function(e) {
         if (e.keyCode == 27 && popupStatus == 1)
             closePopup();
     });
