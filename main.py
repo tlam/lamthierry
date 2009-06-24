@@ -1,4 +1,6 @@
 import logging, os, sys
+from google.appengine.dist import use_library
+use_library('django', '1.0')
 
 # Must set this env var *before* importing any part of Django
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
