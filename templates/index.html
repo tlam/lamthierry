@@ -1,52 +1,162 @@
 {% extends "base.html" %}
 {% block content %}
-  {% include "portfolio.html" %}
+<div id="main">
+  <div id="header">
+    <span id="full_name">Thierry Lam</span> - <span id="position">Web Developer</span>
+  </div>
+ 
+  <div id="left-column">
+    <h2>Profile</h2>
+      Bonjour, my name is Thierry Lam, <strong>Web Developer</strong> with <strong>{{ active_date|timesince }}</strong> of development experience.
+      <br />
+      <br />
+      <fieldset>
+      <legend><em>Experience:</em></legend>
 
-  <div id="greet">Bonjour,</div>
+      <table>
+        <tr>
+          <td class="duration">Feb 2009 - present</td><td class="pos">Web Developer</td>
+        </tr>
+        <tr>
+          <td class="duration">Nov 2006 - Jan 2009</td><td class="pos">Software Infrastructure Developer</td>
+        </tr>
+        <tr>
+          <td class="duration">Feb 2005 - Nov 2006</td><td class="pos">Software Developer</td>
+        </tr>
+      </table>
+      </fieldset>
+    <h2>Skills</h2>
+    <div class="skill-bar">
+      <!--div class="skill-info">PHP - years, More</div>
+      <div class="skill-details"></div>
+      <div class="skill-info">jQuery - years, More</div>
+      <div class="skill-details"></div-->
+      <ul>
+      {% for skill in active_skills %}
+        <li>
+          {{ skill }} - <span class="skill_xp">{{ skill.current_xp|timesince }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+    <h2>Other Skills</h2>
+    <div class="skill-bar">
+      <ul>
+      {% for skill in inactive_skills %}
+        <li>{{ skill }} - {{ skill.level }} {{ skill.level_type }}{{ skill.level|pluralize }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+ 
+  <div id="content">
+    <h2>Portfolio</h2>
+ 
+    <div class="portfolio">
+      <div class="thumbnail">
+        <a><img src="/media/img/fs_hype_thumb.jpg" /></a>
+        <div class="popup_image">
+          <a class="popup_image_close">x</a>
+          <img src="/media/img/fs_hype.png" width="985" height="1930" />
+        </div>
+        <div class="background_popup"></div>
+      </div>
+      <div class="details">
+        <ul>
+          <li><span>Site:</span> <a href="http://www.fabuloussavings.com/hype/">FS Hype</a></li>
+          <li><span>Implementation:</span> PHP, MySQL, jQuery, HTML, CSS</li>
+          <li><span>Done:</span> Navigation, breadcrumb, sorting, pagination, dynamic content generation, voting mechanism and admin pages</li>
+          <li><span>Completed:</span> June 2009</li>
+        </ul>
+      </div>
+    </div>
+    <br style="clear: both" />
+    <hr />
+ 
+    <div class="portfolio">
+      <div class="thumbnail">
+        <a><img src="/media/img/fs_cares_thumb.jpg" /></a>
+      </div>
+        <div class="popup_image">
+          <a class="popup_image_close">x</a>
+          <img src="/media/img/fs_cares.png" width="985" height="1930" />
+        </div>
+        <div class="background_popup"></div>
+      <div class="details">
+        <ul>
+          <li><span>Site:</span> <a href="http://www.fabuloussavings.com/cares/">FS Cares</a></li>
+          <li><span>Implementation:</span> PHP, MySQL, jQuery, HTML, CSS</li>
+          <li><span>Done:</span> Navigation, breadcrumb, sorting, pagination, dynamic content generation and admin pages</li>
+          <li><span>Completed:</span> April 2009</li>
+        </ul>
+      </div>
+    </div>
+    <br style="clear: both" />
+    <hr />
 
-  My name is <span id="full_name">Thierry Lam</span>
-  <div id="position">Web Developer</div>
+    <div class="portfolio">
+      <div class="thumbnail">
+        <a><img src="/media/img/profile_thumb.jpg" /></a>
+      </div>
+        <div class="popup_image">
+          <a class="popup_image_close">x</a>
+          <img src="/media/img/riptunes.png" width="868" height="527" />
+        </div>
+        <div class="background_popup"></div>
+      <div class="details">
+        <ul>
+          <li><span>Site:</span> <a href="http://lamthierry.appspot.com">My Web Portfolio</a></li>
+          <li><span>Implementation:</span> Django, Python, BigTable and Google App Engine</li>
+          <li><span>Done:</span> Dynamic experience profile with some of my web development work</li>
+          <li><span>Completed:</span> June 2009</li>
+          <li><a href="http://github.com/tlam/lamthierry/tree/master" target="_blank">View Source</a></li>
+        </ul>
+      </div>
+    </div>
+    <br style="clear: both" />
+    <hr />
 
-  <strong>{{ active_date|timesince }}</strong> of development experience
-  <table>
-    <tr>
-      <td class="duration">Feb 2009 - present</td><td class="pos">Web Developer</td>
-    </tr>
-    <tr>
-      <td class="duration">Nov 2006 - Jan 2009</td><td class="pos">Software Infrastructure Developer</td>
-    </tr>
-    <tr>
-      <td class="duration">Feb 2005 - Nov 2006</td><td class="pos">Software Developer</td>
-    </tr>
-  </table>
+    <div class="portfolio">
+      <div class="thumbnail">
+        <a><img src="/media/img/riptunes_thumb.jpg" /></a>
+      </div>
+        <div class="popup_image">
+          <a class="popup_image_close">x</a>
+          <img src="/media/img/riptunes.png" width="868" height="527" />
+        </div>
+        <div class="background_popup"></div>
+      <div class="details">
+        <ul>
+          <li><span>Site:</span> <a href="http://sites.google.com/site/lamthierry/Home/projects/riptunes">Riptunes</a></li>
+          <li><span>Implementation:</span> Python, PyQt and the <a href="http://code.google.com/p/quodlibet/wiki/Mutagen">Mutagen Library</a></li>
+          <li><span>Done:</span> Cross-platform desktop application which transfers songs from your iPod to the desktop</li>
+          <li><span>Completed:</span> June 2008</li>
+          <li><a href="http://code.google.com/p/riptunes/source/browse/#svn/trunk/riptunes" target="_blank">View Source</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--br style="clear: both" />
+    <hr /-->
 
-  <h3>Active Skills</h3>
-  <ul>
-  {% for skill in active_skills %}
-    <li>
-      {{ skill }} - <span class="skill_xp">{{ skill.current_xp|timesince }}</span>
-    </li>
-  {% endfor %}
-  </ul>
-
-  <h3>Other Skills</h3> 
-  <ul>
-  {% for skill in inactive_skills %}
-    <li>{{ skill }} - {{ skill.level }} {{ skill.level_type }}{{ skill.level|pluralize }}</li>
-  {% endfor %}
-  </ul>
-
-  <img src="/media/img/business_card.jpg" />
-
-  <ul id="logos">
-    <li><img src="/media/img/python.gif" /></li>
-    <li><img src="/media/img/jquery.gif" /></li>
-    <li><img src="/media/img/php.png" /></li>
-    <li><img src="/media/img/mysql.gif" /></li>
-    <li><img src="/media/img/w3css.png" /></li>
-    <li><img src="/media/img/git.png" /></li>
-  </ul>
-
-  
-  <div class="clear_both"></div><hr />
+  </div>
+ 
+  <br style="clear: both" />
+ 
+  <hr id="footer-hr" />
+  <div id="footer">
+    <div id="outside-links">
+      
+      <a href="http://thierrylam.blogspot.com">Blog</a> |
+      <a href="http://www.linkedin.com/in/thierrylam">Linkedin</a> |
+      <a href="http://twitter.com/ThierryLam">Twitter</a> |
+      <a href="http://sites.google.com/site/lamthierry">Wiki</a>
+    </div>
+    <div id="icons">
+      <span>&copy; 2009 Thierry Lam</span>
+      <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangomade124x25_grey.gif" border="0" alt="Made with Django." title="Made with Django." /></a>
+      <a href="http://code.google.com/appengine/"><img src="http://code.google.com/appengine/images/appengine-noborder-120x30.gif" 
+alt="Powered by Google App Engine" /></a> 
+    </div>
+  </div>
+</div>
 {% endblock %}
