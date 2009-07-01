@@ -1,5 +1,7 @@
-from google.appengine.ext import db
 import datetime
+
+from google.appengine.ext import db
+
 
 class Skill(db.Model):
     name = db.StringProperty()

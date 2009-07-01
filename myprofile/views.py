@@ -1,7 +1,10 @@
+import datetime
+
+import django
 from django.shortcuts import render_to_response
 from google.appengine.ext import db
+
 from myprofile.models import Skill
-import django, datetime
 
 def index(request):
     active_date = datetime.date(2005, 2, 7)
