@@ -41,7 +41,6 @@ h1, h2, h3, h4, h5 {
 #left-column {
     float: left;
     width: 30%;
-    height: 500px;
     text-align: left;
 }
  
@@ -54,7 +53,6 @@ h1, h2, h3, h4, h5 {
     margin-left: 2%;
     text-align: left;
     width: 68%;
-    height: 650px;
 }
 
 div.thumbnail {

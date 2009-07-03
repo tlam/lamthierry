@@ -15,9 +15,6 @@ class Skill(db.Model):
     def __unicode__(self):
         return self.name
 
-    def img_src(self):
-        return '/media/img/' + self.picture
-
     def current_xp(self):
         if self.relearnt_date:
             return self.level + relearnt_date
