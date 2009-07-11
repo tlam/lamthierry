@@ -103,6 +103,14 @@ ul li {
     list-style: none;
 }
 
+ul#code-snippets {
+    padding-left: 17px;
+}
+
+ul#code-snippets li {
+    list-style: circle;
+}
+
 table {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;

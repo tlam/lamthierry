@@ -25,6 +25,7 @@
         </tr>
       </table>
       </fieldset>
+
     <h2>Active Skills</h2>
     <div class="skill-bar">
       <!--div class="skill-info">PHP - years, More</div>
@@ -39,6 +40,7 @@
       {% endfor %}
       </ul>
     </div>
+
     <h2>Other Skills</h2>
     <div class="skill-bar">
       <ul>
@@ -47,6 +49,13 @@
       {% endfor %}
       </ul>
     </div>
+
+    <h2>Code Snippets</h2>
+    <ul id="code-snippets">
+    {% for entry in entries %}
+      <li><a href="{{ entry.link }}">{{ entry.title }}</a> - {{ entry.date|date:"F d, Y" }}</li>
+    {% endfor %}
+    </ul>
   </div>
  
   <div id="content">
@@ -129,6 +138,7 @@
       
       <a href="http://thierrylam.blogspot.com">Blog</a> |
       <a href="http://www.linkedin.com/in/thierrylam">Linkedin</a> |
+      <a href="http://snipt.org/box/thierrylam/">Snipt</a> |
       <a href="http://twitter.com/ThierryLam">Twitter</a> |
       <a href="http://sites.google.com/site/lamthierry">Wiki</a>
     </div>

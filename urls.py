@@ -15,5 +15,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # (r'^admin/(.*)', admin.site.root),
     #(r'^', include('myprofile.urls')),
-    (r'^', 'myprofile.views.index'),
+    #(r'^', 'myprofile.views.index'),
+    url(r'^', include('myprofile.urls'), name='myprofile'),
 )
