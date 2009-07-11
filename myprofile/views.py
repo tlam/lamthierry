@@ -21,7 +21,8 @@ def index(request):
         'active_date': active_date,
         'active_skills': active_skills,
         'entries': _blog_entries(), 
-        'inactive_skills': inactive_skills})
+        'inactive_skills': inactive_skills,
+        'today': datetime.today()})
 
 def _blog_entries():
     """Restful blog reading"""
