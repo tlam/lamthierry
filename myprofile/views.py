@@ -17,12 +17,15 @@ def index(request):
     query.filter('active =', False)
     inactive_skills = query.fetch(10)
 
-    return render_to_response('index.html', {
+    data = {
         'active_date': active_date,
         'active_skills': active_skills,
         'entries': _blog_entries(), 
         'inactive_skills': inactive_skills,
-        'today': datetime.today()})
+        'today': datetime.today()
+    }
+
+    return render_to_response('index.html', data)
 
 def _blog_entries():
     """Restful blog reading"""

@@ -79,10 +79,11 @@ div.details ul li span {
  
 a {
     text-decoration: none;
+    font-weight: bold;
 }
  
 a:link, a:visited {
-    color: #A0A0A0;
+    color: #0077CC;
 }
  
 a:hover {

@@ -9,7 +9,11 @@
     <h2>Profile</h2>
       Bonjour, my name is Thierry Lam, <strong>Web Developer</strong> with <strong>{{ active_date|timesince }}</strong> of development experience.  I specialize in making web sites functional.
       <br />
-      <br />
+
+      <p>
+          <script src="http://stackoverflow.com/users/flair/117642.js?theme=default" type="text/javascript"></script>
+      </p>
+
       <fieldset>
       <legend><em>Experience:</em></legend>
 
@@ -28,24 +32,11 @@
 
     <h2>Active Skills</h2>
     <div class="skill-bar">
-      <!--div class="skill-info">PHP - years, More</div>
-      <div class="skill-details"></div>
-      <div class="skill-info">jQuery - years, More</div>
-      <div class="skill-details"></div-->
       <ul>
       {% for skill in active_skills %}
         <li>
           {{ skill }} - <span class="skill_xp">{{ skill.current_xp|timesince }}</span>
         </li>
-      {% endfor %}
-      </ul>
-    </div>
-
-    <h2>Other Skills</h2>
-    <div class="skill-bar">
-      <ul>
-      {% for skill in inactive_skills %}
-        <li>{{ skill }} - {{ skill.level }} {{ skill.level_type }}{{ skill.level|pluralize }}</li>
       {% endfor %}
       </ul>
     </div>
@@ -124,8 +115,6 @@
         </ul>
       </div>
     </div>
-    <!--br style="clear: both" />
-    <hr /-->
 
   </div>
  
@@ -139,6 +128,7 @@
       <a href="http://thierrylam.blogspot.com">Blog</a> |
       <a href="http://www.linkedin.com/in/thierrylam">Linkedin</a> |
       <a href="http://snipt.org/box/thierrylam/">Snipt</a> |
+      <a href="http://stackoverflow.com/users/117642/thierry-lam">Stackoverflow</a> |
       <a href="http://twitter.com/ThierryLam">Twitter</a> |
       <a href="http://sites.google.com/site/lamthierry">Wiki</a>
     </div>
