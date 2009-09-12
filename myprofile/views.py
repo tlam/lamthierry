@@ -6,6 +6,7 @@ from google.appengine.ext import db
 
 import feedparser
 from myprofile.models import Skill
+from portfolios.models import Portfolio
 
 def index(request):
     active_date = date(2005, 2, 7)
@@ -17,11 +18,15 @@ def index(request):
     query.filter('active =', False)
     inactive_skills = query.fetch(10)
 
+    portfolios = Portfolio.all()
+    portfolios.order('-completed')
+
     data = {
         'active_date': active_date,
         'active_skills': active_skills,
         'entries': _blog_entries(), 
         'inactive_skills': inactive_skills,
+        'portfolios': portfolios,
         'today': datetime.today()
     }
 

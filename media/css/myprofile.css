@@ -55,6 +55,11 @@ h1, h2, h3, h4, h5 {
     width: 68%;
 }
 
+.portfolio {
+    display: inline-block;
+    clear: both;
+}
+
 div.thumbnail {
     float: left;
 }
@@ -66,6 +71,11 @@ div.details {
     width: 79%;
 }
  
+div.details ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 div.details ul li span {
     font-weight: bold;
 }
