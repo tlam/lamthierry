@@ -16,7 +16,8 @@ class SkillLoader(bulkloader.Loader):
             ('active', bool),
             ('picture', str),
             ('learnt_date', lambda x: datetime.datetime.strptime(x, '%Y-%m-%d').date()),
-            ('relearnt_date', lambda x: datetime.datetime.strptime(x, '%Y-%m-%d').date() if x else None)
+            ('relearnt_date', lambda x: datetime.datetime.strptime(x, '%Y-%m-%d').date() if x else None),
+            ('order', lambda x: int(x) if x else 0)
         ]
 
         bulkloader.Loader.__init__(self, 'Skill', fields)

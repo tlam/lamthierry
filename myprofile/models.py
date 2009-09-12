@@ -11,6 +11,7 @@ class Skill(db.Model):
     picture = db.StringProperty()
     learnt_date = db.DateProperty('date learnt')
     relearnt_date = db.DateProperty('date relearnt', required=False)
+    order = db.IntegerProperty()
 
     def __unicode__(self):
         return self.name

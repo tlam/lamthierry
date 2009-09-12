@@ -12,6 +12,7 @@ def index(request):
     active_date = date(2005, 2, 7)
     query = db.Query(Skill)
     query.filter('active =', True)
+    query.order('order')
     active_skills = query.fetch(10)
 
     query = db.Query(Skill)
