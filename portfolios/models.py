@@ -10,6 +10,7 @@ class Portfolio(db.Model):
     completed = db.DateProperty()
     source = db.StringProperty()
     thumbnail = db.StringProperty()
+    image = db.StringProperty()
 
     def __unicode__(self):
         return self.title

@@ -16,7 +16,8 @@ class PortfolioLoader(bulkloader.Loader):
             ('accomplishment', str),
             ('completed', lambda x: datetime.datetime.strptime(x, '%B %Y').date()),
             ('source', str),
-            ('thumbnail', str)
+            ('thumbnail', str),
+            ('image', str)
         ]
 
         bulkloader.Loader.__init__(self, 'Portfolio', fields)
