@@ -1,5 +1,5 @@
 application: lamthierry
-version: 10
+version: 12
 runtime: python
 api_version: 1
 
@@ -10,10 +10,6 @@ handlers:
 
 - url: /media
   static_dir: media
-
-- url: /portfolios/.*
-  script: admin.py
-  login: admin
 
 - url: /.*
   script: main.py

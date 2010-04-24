@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render_to_response
+from django.shortcuts import redirect, render_to_response
 from django.template import RequestContext
 from google.appengine.api import users
 
@@ -7,6 +7,9 @@ from portfolios.forms import PortfolioForm
 from portfolios.models import Portfolio
 
 def index(request):
+    if not users.is_current_user_admin():
+        return redirect(users.create_login_url('/'))
+
     portfolios = Portfolio.all().order('-completed')
 
     data = {
@@ -22,6 +25,9 @@ def index(request):
     )
 
 def add(request):
+    if not users.is_current_user_admin():
+        return redirect(users.create_login_url('/'))
+
     success = False
 
     if request.method == 'POST':
@@ -44,6 +50,9 @@ def add(request):
     )
 
 def update(request, slug):
+    if not users.is_current_user_admin():
+        return redirect(users.create_login_url('/'))
+
     portfolio = Portfolio.all().filter('slug =', slug)
     if portfolio.count():
         portfolio = portfolio[0]
