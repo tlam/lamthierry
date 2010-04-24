@@ -4,6 +4,7 @@ from google.appengine.ext import db
 
 class Portfolio(db.Model):
     title = db.StringProperty()
+    slug = db.StringProperty()
     url = db.StringProperty()
     implementation = db.StringProperty()
     accomplishment = db.StringProperty()

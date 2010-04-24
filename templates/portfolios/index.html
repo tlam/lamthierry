@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Portfolios</h3>
+
+<p>
+  <a href="{% url portfolios:add %}">Add Portfolio</a>
+</p>
+
+{% for portfolio in portfolios %}
+  <div>
+    {{ portfolio.completed }} - 
+    <a href="{% url portfolios:update portfolio.slug %}">{{ portfolio }}</a>
+  </div>
+{% endfor %}
+
+{{ users.is_current_user_admin }}
+
+{% endblock %}

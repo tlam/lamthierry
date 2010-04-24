@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Create Portfolio</h3>
+
+<form action="" method="post" class="portfolio-form">
+  {{ form.as_p }}
+  <input type="submit" value="Create Portfolio" />
+  {% if success %}<span class="success">Portfolio Created</span>{% endif %}
+</form>
+
+{% endblock %}

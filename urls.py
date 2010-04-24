@@ -5,16 +5,6 @@ from django.conf.urls.defaults import *
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^lamthierry/', include('lamthierry.foo.urls')),
-
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # (r'^admin/(.*)', admin.site.root),
-    #(r'^', include('myprofile.urls')),
-    #(r'^', 'myprofile.views.index'),
-    url(r'^', include('myprofile.urls'), name='myprofile'),
+    url(r'^', include('myprofile.urls', namespace='myprofile'), name='myprofile'),
+    url(r'^portfolios/', include('portfolios.urls', namespace='portfolios'), name='portfolios'),
 )

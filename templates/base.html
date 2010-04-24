@@ -5,13 +5,35 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
     <title>Thierry Lam's Profile</title>
     <link type="text/css" rel="stylesheet" href="/media/css/myprofile.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="/media/css/portfolios.css" media="screen" />
     <link type="text/css" rel="stylesheet" href="/media/fullsize/fullsize.css" media="screen"/>
     <script type="text/javascript" src="/media/js/jquery.min.js"></script> 
     <script type="text/javascript" src="/media/fullsize/jquery.fullsize.js"></script>
     <script type="text/javascript" src="/media/js/myprofile.js"></script> 
   </head>
   <body>
+  <div id="header">
+    <span id="full_name">Thierry Lam</span> &lt; <span id="position">Web Developer in Toronto</span>
+  </div>
+  <div id="content">
   {% block content %}{% endblock %}
+  </div>
+  <div id="footer">
+    <div id="outside-links">
+      
+      <a href="http://thierrylam.blogspot.com">Blog</a> |
+      <a href="mailto:thierry.apps@gmail.com">Contact Us</a> |
+      <a href="http://www.linkedin.com/in/thierrylam">Linkedin</a> |
+      <a href="http://snipt.org/box/thierrylam/">Snipt</a> |
+      <a href="http://twitter.com/ThierryLam">Twitter</a> |
+      <a href="http://sites.google.com/site/lamthierry">Wiki</a>
+    </div>
+    <div id="icons">
+      <span>&copy; {{ today|date:"Y" }} Thierry Lam</span>
+      <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangomade124x25_grey.gif" border="0" alt="Made with Django." title="Made with Django." /></a>
+      <a href="http://code.google.com/appengine/"><img src="http://code.google.com/appengine/images/appengine-noborder-120x30.gif" 
+alt="Powered by Google App Engine" /></a> 
+    </div>
 
   <script type="text/javascript">
   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -23,6 +45,7 @@
     pageTracker._trackPageview();
   } catch(err) {}
   </script>
+  </div>
 
   </body>
 </html>

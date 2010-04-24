@@ -1,10 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<div id="main">
-  <div id="header">
-    <span id="full_name">Thierry Lam</span> &lt; <span id="position">Web Developer in Toronto</span>
-  </div>
- 
   <div id="left-column">
     <h2>Profile</h2>
       Bonjour, my name is Thierry Lam, <strong>Web Developer</strong> with <strong>{{ active_date|timesince }}</strong> of development experience.  I specialize in making web sites functional.
@@ -49,7 +44,7 @@
     </ul>
   </div>
  
-  <div id="content">
+  <div id="main">
     <h2>Portfolio</h2>
  
     {% for portfolio in portfolios %}
@@ -69,30 +64,7 @@
           </ul>
         </div>
       </div>
-      {% if not forloop.last %}
-      <hr />
-      {% endif %}
     {% endfor %}
   </div>
 
-  <hr id="footer-hr" style="clear: both"/>
-
-  <div id="footer">
-    <div id="outside-links">
-      
-      <a href="http://thierrylam.blogspot.com">Blog</a> |
-      <a href="mailto:thierry.apps@gmail.com">Contact Us</a> |
-      <a href="http://www.linkedin.com/in/thierrylam">Linkedin</a> |
-      <a href="http://snipt.org/box/thierrylam/">Snipt</a> |
-      <a href="http://twitter.com/ThierryLam">Twitter</a> |
-      <a href="http://sites.google.com/site/lamthierry">Wiki</a>
-    </div>
-    <div id="icons">
-      <span>&copy; {{ today|date:"Y" }} Thierry Lam</span>
-      <a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangomade124x25_grey.gif" border="0" alt="Made with Django." title="Made with Django." /></a>
-      <a href="http://code.google.com/appengine/"><img src="http://code.google.com/appengine/images/appengine-noborder-120x30.gif" 
-alt="Powered by Google App Engine" /></a> 
-    </div>
-  </div>
-</div>
 {% endblock %}

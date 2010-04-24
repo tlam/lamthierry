@@ -19,8 +19,7 @@ def index(request):
     query.filter('active =', False)
     inactive_skills = query.fetch(10)
 
-    portfolios = Portfolio.all()
-    portfolios.order('-completed')
+    portfolios = Portfolio.all().order('-completed')
 
     data = {
         'active_date': active_date,

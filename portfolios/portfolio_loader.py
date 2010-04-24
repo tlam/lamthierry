@@ -11,6 +11,7 @@ class PortfolioLoader(bulkloader.Loader):
     def __init__(self):
         fields = [
             ('title', str),
+            ('slug', str),
             ('url', str),
             ('implementation', str),
             ('accomplishment', str),

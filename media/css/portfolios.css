@@ -1,0 +1,13 @@
+.portfolio-form label {
+  display: inline-block;
+  width: 10em;
+}
+
+.portfolio-form p input {
+  width: 17em;
+}
+ 
+.success {
+  color: green;
+  font-size: 0.8em;
+}
