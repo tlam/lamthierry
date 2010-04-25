@@ -1,18 +1,18 @@
 body {
-    margin: 10px 20px;
-    text-align: center;
-    /*font: 85% "Lucida Grande","Lucida Sans Unicode",geneva,verdana,sans-serif;*/
-    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-    font-size: 90%;
+  margin: 10px 20px;
+  text-align: center;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
 }
  
 h1, h2, h3, h4, h5 {
-    font-family: Geneva, Verdana, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-    font-size: 115%;
-    font-weight: normal;
-    color: white;
-    background-color: #5CACEE;
-    padding: 3px 7px;
+  -moz-border-radius-topleft: 0.4em;
+  -webkit-border-top-left-radius: 0.4em;
+  background-color: #5CACEE;
+  color: white;
+  font-size: 1.1em;
+  font-weight: normal;
+  padding: 0.2em 0.4em;
 }
 
 #full_name {
@@ -27,15 +27,21 @@ h1, h2, h3, h4, h5 {
 }
  
 #header, #content, #footer {
-    width: 1100px;
-    margin: 0px auto;
-    text-align: left;
+  margin: 0 auto;
+  overflow: auto;
+  text-align: left;
+  width: 1100px;
 }
  
 #header {
-    font-family: arial, sans-serif;
-    background-color: #F0F0F0;
-    height: 30px;
+  -moz-border-radius-topleft: 0.6em;
+  -moz-border-radius-topright: 0.6em;
+  -webkit-border-top-left-radius: 0.6em;
+  -webkit-border-top-right-radius: 0.6em;
+  background-color: #F0F0F0;
+  font-family: arial, sans-serif;
+  padding-left: 0.5em;
+  width: 1093px;
 }
 
 #content {
@@ -44,26 +50,24 @@ h1, h2, h3, h4, h5 {
 
 #footer {
   border-top: 1px solid #9FAFB7;
-  overflow: auto;
   padding-top: 0.5em;
 }
 
 #left-column {
-    float: left;
-    width: 30%;
-    text-align: left;
+  float: left;
+  width: 30%;
+  text-align: left;
 }
  
 #left-column div.skill-bar ul {
-    padding-left: 0px;
+  padding-left: 0;
 }
 
 #main {
-    float: left;
-    margin-left: 2%;
-    margin-bottom: 1em;
-    text-align: left;
-    width: 68%;
+  float: right;
+  margin-bottom: 1em;
+  text-align: left;
+  width: 68%;
 }
 
 .portfolio {
@@ -78,75 +82,79 @@ div.thumbnail {
 }
  
 div.details {
-    float: left;
-    margin-right: 0;
-    padding-right: 0;
-    width: 570px;
+  float: left;
+  margin-right: 0;
+  padding-right: 0;
+  width: 79%;
 }
  
 div.details ul {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1.5em;
 }
 
 div.details ul li span {
-    font-weight: bold;
+  font-weight: bold;
 }
  
 #outside-links {
-    float: left;
+  float: left;
 }
  
 a {
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
 }
  
 a:link, a:visited {
-    color: #0077CC;
+  color: #0077CC;
 }
  
 a:hover {
-    text-decoration: underline;
-    color: #5CACEE;
+  text-decoration: underline;
+  color: #5CACEE;
 }
  
 #icons {
-    float: right;
+  float: right;
 }
 
 #icons span {
-    color: #A0A0A0;
-    font-size: 11px;
+  color: #A0A0A0;
+  font-size: 11px;
 }
  
 ul li {
-    list-style: none;
+  list-style: none;
 }
 
 ul#code-snippets {
-    padding-left: 17px;
+  padding-left: 1.2em;
 }
 
 ul#code-snippets li {
-    list-style: circle;
+  list-style: circle;
 }
 
 table {
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
-  border: 1px solid #000;
-  padding: 0 10px;
   background: #F8F8F8;
+  border: 1px solid #000;
+  padding: 0 0.5em;
 }
 
 table td.duration {
-  font-size: 13px;
+  font-size: 0.9em;
   font-weight: bold;
-  padding-right: 20px;
 }
 
 table td.pos {
   text-align: right;
   font-style: oblique;
+}
+
+img {
+  border: none;
 }
